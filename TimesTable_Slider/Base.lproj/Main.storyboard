@@ -1,26 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11173.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11143.2"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TimesTable_Slider" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="zxP-Y2-jbi"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="08p-ue-PfO">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Times Table" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLt-7J-ubL">
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="08p-ue-PfO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3o4-ek-m3p"/>
+                            <constraint firstItem="zxP-Y2-jbi" firstAttribute="top" secondItem="dLt-7J-ubL" secondAttribute="bottom" constant="6" id="BES-Em-0kH"/>
+                            <constraint firstItem="zxP-Y2-jbi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DAi-GE-IjV"/>
+                            <constraint firstItem="08p-ue-PfO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Fac-vL-9yS"/>
+                            <constraint firstAttribute="trailing" secondItem="08p-ue-PfO" secondAttribute="trailing" id="Hpq-F5-X0Y"/>
+                            <constraint firstItem="dLt-7J-ubL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="KiP-TG-aSW"/>
+                            <constraint firstItem="zxP-Y2-jbi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MGv-6j-Rvo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="08p-ue-PfO" secondAttribute="bottom" id="Qyh-Fy-nS3"/>
+                            <constraint firstItem="08p-ue-PfO" firstAttribute="top" secondItem="zxP-Y2-jbi" secondAttribute="bottom" constant="8" id="fGZ-jg-ED6"/>
+                            <constraint firstItem="zxP-Y2-jbi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iWj-9d-abv"/>
+                            <constraint firstItem="dLt-7J-ubL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oDv-8s-uwS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.875" y="137.5"/>
         </scene>
     </scenes>
 </document>
