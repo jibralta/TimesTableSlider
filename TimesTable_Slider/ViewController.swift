@@ -31,10 +31,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        // for i in 1...20 {
-        
-        cell.textLabel?.text =  String(Int(slider.value) * Int(indexPath.row + 1))
-
+        cell.textLabel?.text =  "\(indexPath.row + 1) x \(Int(slider.value)) = \(String(Int(slider.value) * Int(indexPath.row + 1)))"
+    
         return cell
     }
     
