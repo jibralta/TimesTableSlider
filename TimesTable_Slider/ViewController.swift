@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         print(slider.value)
         
-        // table.reloadData()
+        table.reloadData()
         
     }
     
@@ -31,8 +31,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "Cell")
         
-        cell.textLabel?.text = "Test Return"
+        // for i in 1...20 {
         
+        cell.textLabel?.text =  String(Int(slider.value) * Int(indexPath.row + 1))
+
         return cell
     }
     
